@@ -47,7 +47,7 @@ function draw() {
     // add 2 to the value of lastbilX each time draw is called
     lastbilX = lastbilX + 2;
 
-    // if lastbilX is greater than the width of the canvas minus 20, reset lastbilX to 625
+    // if lastbilX is greater than the width of the canvas (- 20), move the lastbil back
     if (lastbilX > width - 20) {
       lastbilX = 625;
     }
