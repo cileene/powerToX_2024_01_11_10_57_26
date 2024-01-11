@@ -56,6 +56,7 @@ function draw() {
       lastbilX = 625;
     }
   }
+  
   // Opgave 7b
   // when P is pressed, pump gylle
   if (keyIsPressed && key == "p") {
