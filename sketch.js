@@ -23,6 +23,12 @@ function draw() {
   background(220);
   diagram.draw();
 
+  // write my name as text to the bottom right of the canvas
+  fill(120);
+  textSize(15);
+  strokeWeight(0.5);
+  text("Nick Lee Jerlung", 687, 397);
+
   // draw the lastbil image to the bottom right of the canvas
   image(lastbil, lastbilX, 270);
 
