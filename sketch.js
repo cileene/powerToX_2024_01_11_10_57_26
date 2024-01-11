@@ -1,3 +1,9 @@
+/* 
+TSA 48 timers eksamen
+RUC januar 2024
+Nick Lee Jerlung
+ */
+
 // declare variables
 var gylle;
 var lastbil;
