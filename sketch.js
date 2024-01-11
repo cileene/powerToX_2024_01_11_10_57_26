@@ -3,7 +3,7 @@ var gylle;
 var lastbil;
 var gasflaske;
 var diagram;
-//var hiNick = 0;
+var lastbilX = 625;
 
 // preload the images
 function preload() {
@@ -16,9 +16,6 @@ function preload() {
 function setup() {
   createCanvas(800, 400);
   diagram = new Diagram();
-
-/*   // test that the program is running by writing "Hi nick" to the console
-  console.log("Hi nick"); */
 }
 
 // draw to the canvas each frame
@@ -27,13 +24,22 @@ function draw() {
   diagram.draw();
 
   // draw the lastbil image to the bottom right of the canvas
-  image(lastbil, 625, 270);
+  image(lastbil, lastbilX, 270);
 
-/*   // add 1 to the value of hiNick each time draw is called
-  hiNick = hiNick + 1;
+  // if K is pressed, make the lastbil drive to the right
+  if (keyIsPressed && key == "k") {
 
-  // write Hi Nick! + the value of hiNick to the console
-  console.log("Hi Nick!", hiNick); */
+    // write "k is pressed" to the console
+    console.log("k is pressed");
+
+    // add 2 to the value of lastbilX each time draw is called
+    lastbilX = lastbilX + 2;
+
+    // if lastbilX is greater than the width of the canvas minus 20, reset lastbilX to 625
+    if (lastbilX > width - 20) {
+      lastbilX = 625;
+    }
+  }
 
   // when P is pressed, pump gylle
   if (keyIsPressed && key == "p") {
@@ -52,9 +58,6 @@ function draw() {
     image(gylle, 75, 125, 83, 50);
   }
 
-  // draw an rectangle over the vindmølle to use as a collider for mouseOver
-  //rect(7, 205, 100, 100);
-
   // when mouseover
   if (mouseX > 7 && mouseX < 107 && mouseY > 205 && mouseY < 305) {
 
@@ -64,7 +67,7 @@ function draw() {
     // call drejVinger function from the diagram class
     diagram.drejVinger();
 
-    // draw 20 small gaslflasker to the left of the lastbil
+    // draw 20 small gasflasker to the left of the lastbil
     for (var i = 0; i < 20; i++) {
       image(gasflaske, 634 - i * 8, 334, 13, 13);
     }
