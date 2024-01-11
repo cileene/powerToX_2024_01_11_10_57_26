@@ -1,12 +1,15 @@
 // declare variables
 var gylle;
+var lastbil;
+var gasflaske;
 var diagram;
-var hiNick = 0;
+//var hiNick = 0;
 
 // preload the images
 function preload() {
   gylle = loadImage("gylle.png");
   lastbil = loadImage("lastbil.png");
+  gasflaske = loadImage("gasflaske.png");
 }
 
 // setup the canvas
@@ -24,7 +27,7 @@ function draw() {
   diagram.draw();
 
   // draw the lastbil image to the bottom right of the canvas
-  image(lastbil, 500, 270);
+  image(lastbil, 625, 270);
 
 /*   // add 1 to the value of hiNick each time draw is called
   hiNick = hiNick + 1;
@@ -60,5 +63,10 @@ function draw() {
 
     // call drejVinger function from the diagram class
     diagram.drejVinger();
+
+    // draw 20 small gaslflasker to the left of the lastbil
+    for (var i = 0; i < 20; i++) {
+      image(gasflaske, 634 - i * 8, 334, 13, 13);
+    }
   }
 }
