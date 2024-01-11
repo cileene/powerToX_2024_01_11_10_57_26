@@ -10,6 +10,7 @@ var lastbil;
 var gasflaske;
 var diagram;
 var lastbilX = 625;
+var myName = "Nick Lee Jerlung";
 
 // preload the images
 function preload() {
@@ -30,11 +31,11 @@ function draw() {
   diagram.draw();
 
   // Opgave 7g
-  // write my name as text to the bottom right of the canvas
+  // write my name (stored as variable myName) as text to the bottom right of the canvas
   fill(120);
   textSize(15);
   strokeWeight(0.5);
-  text("Nick Lee Jerlung", 687, 396);
+  text(myName, 687, 396);
 
   // Opgave 7a
   // draw the lastbil image to the bottom right of the canvas
