@@ -27,7 +27,7 @@ function draw() {
   fill(120);
   textSize(15);
   strokeWeight(0.5);
-  text("Nick Lee Jerlung", 687, 397);
+  text("Nick Lee Jerlung", 687, 396);
 
   // draw the lastbil image to the bottom right of the canvas
   image(lastbil, lastbilX, 270);
