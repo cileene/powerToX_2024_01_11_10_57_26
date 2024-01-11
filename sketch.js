@@ -29,15 +29,18 @@ function draw() {
   background(220);
   diagram.draw();
 
+  // Opgave 7g
   // write my name as text to the bottom right of the canvas
   fill(120);
   textSize(15);
   strokeWeight(0.5);
   text("Nick Lee Jerlung", 687, 396);
 
+  // Opgave 7a
   // draw the lastbil image to the bottom right of the canvas
   image(lastbil, lastbilX, 270);
 
+  // Opgave 7f
   // if K is pressed, make the lastbil drive to the right
   if (keyIsPressed && key == "k") {
 
@@ -52,7 +55,7 @@ function draw() {
       lastbilX = 625;
     }
   }
-
+  // Opgave 7b
   // when P is pressed, pump gylle
   if (keyIsPressed && key == "p") {
 
@@ -62,6 +65,7 @@ function draw() {
     // call the pumpGylle function from the diagram class
     diagram.pumpGylle();
 
+    // Opgave 7c
     // show a smaller pile of gylle
     image(gylle, 110, 150, 50, 25);
   } else {
@@ -70,16 +74,18 @@ function draw() {
     image(gylle, 75, 125, 83, 50);
   }
 
-  // when mouseover
+  // Opgave 7d
+  // when mouseOver
   if (mouseX > 7 && mouseX < 107 && mouseY > 205 && mouseY < 305) {
 
     // write "mouseOver" to the console
-    console.log("mouseover");
+    console.log("mouseOver");
 
     // call drejVinger function from the diagram class
     diagram.drejVinger();
 
-    // draw 20 small gasflasker to the left of the lastbil
+    // Opgave 7e
+    // draw 20 * gasflaske to the left of the lastbil
     for (var i = 0; i < 20; i++) {
       image(gasflaske, 634 - i * 8, 334, 13, 13);
     }
